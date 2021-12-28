@@ -1,18 +1,17 @@
 const express=require('express');
-const { MongoClient, ConnectionClosedEvent } = require('mongodb');
+const { MongoClient } = require('mongodb');
 const cors=require('cors');
 require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 const ObjectId=require("mongodb").ObjectId;
 
-
 // middleware
 app.use(cors());
 app.use(express.json());
 
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.j1j7j.mongodb.net/food_order?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.klk0u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function run(){
