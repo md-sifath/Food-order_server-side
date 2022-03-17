@@ -70,6 +70,12 @@ async function run(){
             const result=await orderCollection.deleteOne(query);
             res.json(result);
         })
+        // app.put('/order/:id',async(req,res)=>{
+        //     const id=req.params.id;
+        //     const filter={_id: ObjectId(id)};
+        //     console.log(filter);
+        //     console.log('use id is' ,req);
+        // })
     }
     finally{
         // await client.close();
